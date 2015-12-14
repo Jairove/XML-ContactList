@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT libreta (persona*, grupo*)>
+<!ELEMENT persona (apellidos?, nombre, mail+, telefono*)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ATTLIST persona nickname ID #REQUIRED>
+<!ELEMENT mail (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ATTLIST telefono etiqueta (MovilPersonal|MovilTrabajo|FijoCasa|FijoTrabajo) "MovilPersonal">
+<!ELEMENT grupo (miembro+)>
+<!ATTLIST grupo groupname ID #REQUIRED>
+<!ELEMENT miembro EMPTY>
+<!ATTLIST miembro id IDREF #REQUIRED>
+
+
+
